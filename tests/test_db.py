@@ -14,7 +14,7 @@ def test_get_close_db(app):
     assert 'closed' in str(e)
 
 def test_init_db_command(runner, monkeypatch):
-    class Recorder(lobject):
+    class Recorder(object):
         called = False
 
     def fake_init_db():
